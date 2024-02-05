@@ -1,0 +1,89 @@
+/* styles.css */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+  color: #333;
+}
+
+header p,
+.search-input {
+  color: #666;
+  margin: 10px 0;
+}
+
+.search-input {
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+nav button {
+  background-color: #3770e4;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+nav button:hover {
+  background-color: #285ea8;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #1e1e1e;
+  color: #fff;
+  width: 300px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+pre,
+code {
+  background-color: #1e1e1e;
+  color: #9cdcfe;
+  font-family: "Consolas", "Courier New", monospace;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.card p {
+  color: #dcdcdc;
+}
+
+footer {
+  margin-top: 40px;
+  color: #999;
+}
