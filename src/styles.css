@@ -106,7 +106,11 @@ nav button:hover {
   color: #fff;
   font-family: 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace; /* Monospaced font for authenticity */
   padding: 10px; /* Padding inside the terminal */
+  position: relative; /* For positioning interactive elements within */
+  overflow-x: auto; /* Allows horizontal scrolling */
+  white-space: nowrap; /* Prevents command from wrapping */
 }
+
 
 .description {
   background: #1e1e1e; /* Dark background to match the terminal */
