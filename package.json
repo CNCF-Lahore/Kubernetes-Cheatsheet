@@ -1,10 +1,12 @@
 {
   "name": "kubernetes-commands",
   "version": "1.0.0",
+  "homepage": "https://cncf-lahore.github.io/Kubernetes-Cheatsheet/",
   "description": "",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "gh-pages": "^6.1.1",
     "react": "17.0.0",
     "react-dom": "17.0.0"
   },
