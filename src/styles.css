@@ -51,39 +51,106 @@ nav button:hover {
   gap: 20px;
 }
 
+/* ... other styles ... */
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
 .card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #1e1e1e;
-  color: #fff;
   width: 300px;
-  padding: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: transform 0.2s;
+  border-radius: 8px;
+  margin: 10px;
+  overflow: hidden; /* Ensure children do not overflow the rounded corners */
 }
 
-.card:hover {
-  transform: scale(1.05);
+.terminal-header {
+  background: #333; /* Darker shade for the window header */
+  color: #fff;
+  padding: 6px 12px; /* Adjust as needed */
+  border-top-left-radius: 8px; /* Match the card border radius */
+  border-top-right-radius: 8px;
+  display: flex; /* For inline elements */
+  align-items: center; /* Align the items vertically */
 }
 
-pre,
-code {
-  background-color: #1e1e1e;
-  color: #9cdcfe;
-  font-family: "Consolas", "Courier New", monospace;
+.window-controls {
+  display: flex;
+  gap: 4px;
 }
 
-pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
+.window-control {
+  width: 12px; /* Adjust as needed */
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
 }
 
-.card p {
-  color: #dcdcdc;
+.window-control.close {
+  background: #ff605c; /* Red */
 }
 
-footer {
-  margin-top: 40px;
-  color: #999;
+.window-control.minimize {
+  background: #ffbd44; /* Yellow */
 }
+
+.window-control.expand {
+  background: #00ca4e; /* Green */
+}
+
+.command-content {
+  background: #1e1e1e; /* Dark background for the terminal area */
+  color: #fff;
+  font-family: 'Menlo', 'Monaco', 'Consolas', 'Courier New', monospace; /* Monospaced font for authenticity */
+  padding: 10px; /* Padding inside the terminal */
+}
+
+.description {
+  background: #1e1e1e; /* Dark background to match the terminal */
+  color: #dcdcdc; /* Light gray color for text, ensuring readability */
+  padding: 10px; /* Padding to match the terminal's content */
+  border-bottom: 1px solid #333; /* Separator */
+}
+
+.command pre {
+  background: transparent; /* No need as it's set by .command-content */
+  color: #9cdcfe; /* Light blue color for code to mimic the terminal */
+  margin: 0; /* Remove default margin from <pre> */
+  white-space: pre; /* Ensure whitespace is respected */
+}
+
+/* ... other styles ... */
+
+.commands-container {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap onto the next line */
+  justify-content: center; /* Center items along the main axis */
+  align-items: flex-start; /* Align items to the start of the cross axis */
+  gap: 20px; /* Space between command cards */
+}
+
+.card {
+  width: calc(33.333% - 20px); /* Adjust width for 3 cards in a row, subtracting the gap */
+  margin-bottom: 20px; /* Additional spacing at the bottom */
+  /* ... other .card styles ... */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1024px) {
+  .card {
+    width: calc(50% - 20px); /* Adjust width for 2 cards in a row on medium-sized screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 100%; /* Full width for small screens, one card per row */
+  }
+}
+
+/* ... other styles ... */
+
+/* ... other styles ... */

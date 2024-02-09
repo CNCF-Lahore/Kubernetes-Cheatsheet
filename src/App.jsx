@@ -1,4 +1,3 @@
-// App.js
 import React, { useState } from "react";
 import "./styles.css";
 import {
@@ -77,28 +76,38 @@ export default function App() {
             <button
               key={category}
               onClick={() => onClickEventHandler(category)}
+              className={`nav-button ${inputJSON === category.toLowerCase() + 'Json' ? 'active' : ''}`}
             >
               {category}
             </button>
           ),
         )}
       </nav>
-      <section className="card-container">
-        {filterCommands(inputJSON).map((item) => (
-          <div
-            key={item.id}
-            className="card"
-            onClick={() => copyToClipboard(item.command)}
-          >
-            <pre>
-              <code>{item.command}</code>
-            </pre>
-            <p>{item.description}</p>
+      <main>
+  <div className="commands-container">
+    {filterCommands(inputJSON).map((item) => (
+      <div key={item.id} className="card">
+        <div className="terminal-header">
+          <div className="window-controls">
+            <span className="window-control close"></span>
+            <span className="window-control minimize"></span>
+            <span className="window-control expand"></span>
           </div>
-        ))}
-      </section>
+          
+        </div>
+        <div className="description">
+          <p>{item.description}</p>
+        </div>
+        <div className="command-content">
+          <pre><code>{item.command}</code></pre>
+        </div>
+      </div>
+    ))}
+  </div>
+</main>
+
       <footer>
-        <p>2024 All Rights Reserved- Created by Adil Shahzad</p>
+        <p>2024 All Rights Reserved - Created by Adil Shahzad</p>
       </footer>
     </div>
   );
